@@ -1,11 +1,36 @@
-From Dust Hook
+From Dust Hook-fix
 =============
 
-Hook for From Dust that enables the level editor and stuff.
+Hook for From Dust that enables the level editor, this forked version fixes the water simulation physics as well as adds a FPS config file.
+
 
 # Instructions
-1) Build the thing. You should get a file called `xapofx1_5.dll` in your output.
-2) Copy that and `startup.txt` into the game's executable folder.
+1. Put fps_settings.txt into the root folder.
+   Set your FPS in the file. Top number is FPS, bottom number is simulation rate. 
+   I've found the best sim rate is your fps+5 (so 60 65, 120 125, etc).
+   +1 may work fine too and will slow it down a very tiny bit, so you can try that too (60 61, 120 121, etc).
+   A simrate lower than the FPS can cause the water to be a bit buggy.
+2. Put XAPOFX1_5.dll in the root folder of From Dust, (same location as From_Dust.exe)
+3. Put startup.txt into the root folder
+3. Drag and drop BinPC in the root folder so it merges with the BinPC folder that already exists.
+4. Go into BinPC/videoPatch and run videoSkipPatch.bat
+5. Done!
+
+Credit goes to  
+https://github.com/DrChat/FromDustHook  
+for creating the hook, level editor, etc.
+
+Credit: an0nymooose  
+https://steamcommunity.com/id/dilunn  
+Implemented fps_settings, as well as the water physics fix after many grueling days staring at assembly.
+
+Hints:
+
+Yes the water will seem a bit faster, I think it's playable though as its not too much faster.
+If you increase to 120fps+ it may feel too fast, but its up to you.
+
+Any big brain reverse engineers out there, if you figure out how to slow the water simulation speed 
+without it bugging and without lowering the fps, please add me on steam or comment on the thread in the steam forums.
 
 # Editor Controls
 ```
